@@ -61,10 +61,10 @@ x-airflow-common:
     PIPELINE_DB_NAME: airflow
     PIPELINE_DB_USER: airflow
     PIPELINE_DB_PASSWORD: airflow123
-    AWS_ACCESS_KEY_ID: "AKIAT6E3DP3IMSMJPHF6"
-    AWS_SECRET_ACCESS_KEY: "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"
+    AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+    AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
     AWS_DEFAULT_REGION: "us-east-1"
-    S3_BUCKET_NAME: "air-quality-pipeline-zyaria"
+    S3_BUCKET_NAME: ${S3_BUCKET_NAME}
     AIRFLOW__CORE__AUTH_MANAGER: airflow.providers.fab.auth_manager.fab_auth_manager.FabAuthManager
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow123@postgres/airflow
     AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql+psycopg2://airflow:airflow123@postgres/airflow
