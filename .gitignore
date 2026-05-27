@@ -19,3 +19,5 @@ plugins/
 
 # Raw data
 raw_data/
+
+dbt/air_quality_dbt/profiles.yml

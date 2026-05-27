@@ -11,3 +11,16 @@
 {"timestamp":"2026-05-27T02:55:19.682920Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
 {"timestamp":"2026-05-27T02:55:19.683598Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
 {"timestamp":"2026-05-27T02:55:19.684958Z","level":"info","event":"Task operator:<Task(PythonOperator): fetch_data>","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:52.656506Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-27T05:36:52.659753Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/air_quality_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-27T05:36:53.426158Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:53.426923Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:53.427388Z","level":"info","event":"Current task name:fetch_data","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:53.427979Z","level":"info","event":"Dag name:air_quality_pipeline","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:54.004860Z","level":"info","event":"Fetched 2 records","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:54.005448Z","level":"info","event":"Saved to /opt/airflow/raw_data/air_quality_2026-05-27.json","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:54.007399Z","level":"info","event":"Done. Returned value was: /opt/airflow/raw_data/air_quality_2026-05-27.json","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-27T05:36:54.008067Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019e67ef-68ac-7877-934f-0cc32e3949f4'), task_id='fetch_data', dag_id='air_quality_pipeline', run_id='scheduled__2026-05-27T00:00:00+00:00', try_number=1, dag_version_id=UUID('019e67e9-e244-7c21-8c51-d88e02cab453'), map_index=-1, hostname='7ee102d5e8b1', context_carrier={'traceparent': '00-df7b415ec21b34f39f564a5d79c0ffb9-1672beabcbaa02b8-01'}, task=<Task(PythonOperator): fetch_data>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2026, 5, 27, 5, 36, 45, 541905, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None, sentry_integration='')","logger":"task","filename":"task_runner.py","lineno":1724}
+{"timestamp":"2026-05-27T05:36:54.134525Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:54.134953Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:54.135389Z","level":"info","event":"Task operator:<Task(PythonOperator): fetch_data>","logger":"task.stdout"}

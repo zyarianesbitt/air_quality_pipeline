@@ -13,3 +13,18 @@
 {"timestamp":"2026-05-27T02:55:23.242340Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
 {"timestamp":"2026-05-27T02:55:23.243076Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
 {"timestamp":"2026-05-27T02:55:23.243725Z","level":"info","event":"Task operator:<Task(PythonOperator): validate_data>","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:55.804343Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-27T05:36:55.806963Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/air_quality_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-27T05:36:55.862473Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:55.863199Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:55.863813Z","level":"info","event":"Current task name:validate_data","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:55.864358Z","level":"info","event":"Dag name:air_quality_pipeline","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:55.905785Z","level":"info","event":"Total records: 2","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:55.906306Z","level":"info","event":"Data type: <class 'list'>","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:55.906748Z","level":"info","event":"Full data: [{'DateObserved': '2026-05-27', 'HourObserved': 0, 'LocalTimeZone': 'EST', 'ReportingArea': 'New York City Region', 'StateCode': 'NY', 'Latitude': 40.8419, 'Longitude': -73.8359, 'ParameterName': 'O3', 'AQI': 30, 'Category': {'Number': 1, 'Name': 'Good'}}, {'DateObserved': '2026-05-27', 'HourObserved': 0, 'LocalTimeZone': 'EST', 'ReportingArea': 'New York City Region', 'StateCode': 'NY', 'Latitude': 40.8419, 'Longitude': -73.8359, 'ParameterName': 'PM2.5', 'AQI': 46, 'Category': {'Number': 1, 'Name': 'Good'}}]","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:55.907262Z","level":"info","event":"Validation passed — 2 total records","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:55.907687Z","level":"info","event":"Records with AQI: 2","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:55.905832Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-27T05:36:55.945972Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:55.946515Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-27T05:36:55.947040Z","level":"info","event":"Task operator:<Task(PythonOperator): validate_data>","logger":"task.stdout"}
