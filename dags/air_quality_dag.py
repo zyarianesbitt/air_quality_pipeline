@@ -117,6 +117,7 @@ with DAG(
                     latitude,
                     longitude
                 ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                ON CONFLICT (date_pbserved, city, pollutant) DO NOTHING)
             """, (
                 record.get('DateObserved'),
                 record.get('HourObserved'),
