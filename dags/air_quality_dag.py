@@ -117,7 +117,7 @@ with DAG(
                     latitude,
                     longitude
                 ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-                ON CONFLICT (date_pbserved, city, pollutant) DO NOTHING)
+                ON CONFLICT (date_observed, city, pollutant) DO NOTHING
             """, (
                 record.get('DateObserved'),
                 record.get('HourObserved'),
@@ -136,6 +136,28 @@ with DAG(
 
         print(f"Loaded {len(data)} records into PostgreSQL")
 
+    # --- Task 4: run dbt transformation ---
+    def run_dbt():
+        import subprocess
+
+        # install dbt if not present
+        subprocess.run(
+            ["pip", "install", "dbt-postgres"],
+            capture_output=True
+        )
+
+        # run dbt
+        result = subprocess.run(
+            ["/home/airflow/.local/bin/dbt", "run", "--profiles-dir", "/opt/airflow/dbt/air_quality_dbt"],
+            capture_output=True,
+            text=True,
+            cwd="/opt/airflow/dbt/air_quality_dbt"
+        )
+        print(result.stdout)
+        if result.returncode != 0:
+            raise Exception(f"dbt failed: {result.stderr}")
+        print("dbt transformation completed successfully")
+
     # --- wire up the tasks ---
     task_fetch = PythonOperator(
         task_id='fetch_data',
@@ -152,5 +174,10 @@ with DAG(
         python_callable=load_to_postgres
     )
 
+    task_dbt = PythonOperator(
+        task_id='run_dbt',
+        python_callable=run_dbt
+    )
+
     # --- set the order ---
-    task_fetch >> task_validate >> task_load
+    task_fetch >> task_validate >> task_load >> task_dbt
