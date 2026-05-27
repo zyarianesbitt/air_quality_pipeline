@@ -50,7 +50,28 @@ with DAG(
 
         return filename
 
-    # --- Task 2: validate the data ---
+
+    # --- Task 2: upload raw data to S3 ---
+    def upload_to_s3(**context):
+        import boto3
+
+        filename = context['ti'].xcom_pull(task_ids='fetch_data')
+
+        s3 = boto3.client(
+            's3',
+            aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
+            aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
+            region_name=os.getenv("AWS_DEFAULT_REGION")
+        )
+
+        bucket = os.getenv("S3_BUCKET_NAME")
+        key = f"raw/air_quality_{datetime.today().strftime('%Y-%m-%d')}.json"
+
+        s3.upload_file(filename, bucket, key)
+
+        print(f"Uploaded {filename} to s3://{bucket}/{key}")
+
+    # --- Task 3: validate the data ---
     def validate_data(**context):
         filename = context['ti'].xcom_pull(task_ids='fetch_data')
 
@@ -179,5 +200,10 @@ with DAG(
         python_callable=run_dbt
     )
 
+    task_s3 = PythonOperator(
+        task_id='upload_to_s3',
+        python_callable=upload_to_s3
+    )
+
     # --- set the order ---
-    task_fetch >> task_validate >> task_load >> task_dbt
+    task_fetch >> task_s3 >> task_validate >> task_load >> task_dbt
