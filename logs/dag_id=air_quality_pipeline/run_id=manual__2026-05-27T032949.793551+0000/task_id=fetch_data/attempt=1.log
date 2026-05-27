@@ -1,0 +1,13 @@
+{"timestamp":"2026-05-27T03:29:57.118993Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-27T03:29:57.121174Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/air_quality_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-27T03:29:57.242287Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:57.243150Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:57.243739Z","level":"info","event":"Current task name:fetch_data","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:57.244138Z","level":"info","event":"Dag name:air_quality_pipeline","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:57.678492Z","level":"info","event":"Fetched 2 records","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:57.679961Z","level":"info","event":"Saved to /opt/airflow/raw_data/air_quality_2026-05-27.json","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:57.681464Z","level":"info","event":"Done. Returned value was: /opt/airflow/raw_data/air_quality_2026-05-27.json","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-27T03:29:57.681901Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019e677b-3b16-7353-89ae-74a5c8e0dfe2'), task_id='fetch_data', dag_id='air_quality_pipeline', run_id='manual__2026-05-27T03:29:49.793551+00:00', try_number=1, dag_version_id=UUID('019e5dcd-7eea-7208-b48f-6777e1c41bc1'), map_index=-1, hostname='6c15ea9932c8', context_carrier={'traceparent': '00-e10b885349fe29249b05af5a7e912fc1-7896e282b6b14cad-01'}, task=<Task(PythonOperator): fetch_data>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2026, 5, 27, 3, 29, 51, 351328, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None, sentry_integration='')","logger":"task","filename":"task_runner.py","lineno":1724}
+{"timestamp":"2026-05-27T03:29:57.779955Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:57.780749Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:57.781203Z","level":"info","event":"Task operator:<Task(PythonOperator): fetch_data>","logger":"task.stdout"}

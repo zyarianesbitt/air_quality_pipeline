@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/dbt/air_quality_dbt/models/air_quality_summary.sql" value="02a22334-c4f5-4e94-aad2-c6ed093a910e" />
+  </component>
+</project>

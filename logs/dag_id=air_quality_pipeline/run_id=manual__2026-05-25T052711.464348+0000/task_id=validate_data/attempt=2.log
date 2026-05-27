@@ -1,0 +1,13 @@
+{"timestamp":"2026-05-25T05:32:15.385336Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-25T05:32:15.387032Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/air_quality_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-25T05:32:15.424065Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-25T05:32:15.424879Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-25T05:32:15.425276Z","level":"info","event":"Current task name:validate_data","logger":"task.stdout"}
+{"timestamp":"2026-05-25T05:32:15.425623Z","level":"info","event":"Dag name:air_quality_pipeline","logger":"task.stdout"}
+{"timestamp":"2026-05-25T05:32:15.443218Z","level":"info","event":"Total records: 1","logger":"task.stdout"}
+{"timestamp":"2026-05-25T05:32:15.443689Z","level":"info","event":"First record: <class 'dict'>","logger":"task.stdout"}
+{"timestamp":"2026-05-25T05:32:15.443974Z","level":"info","event":"All keys in first record: {'WebServiceError': [{'Message': 'Invalid API key'}]}","logger":"task.stdout"}
+{"timestamp":"2026-05-25T05:32:15.443225Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-25T05:32:15.465894Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-25T05:32:15.466390Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-25T05:32:15.466872Z","level":"info","event":"Task operator:<Task(PythonOperator): validate_data>","logger":"task.stdout"}

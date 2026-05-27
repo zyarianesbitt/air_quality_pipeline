@@ -1,0 +1,15 @@
+{"timestamp":"2026-05-27T03:29:59.168658Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-27T03:29:59.171579Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/air_quality_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-27T03:29:59.272782Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:59.273821Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:59.274365Z","level":"info","event":"Current task name:validate_data","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:59.274934Z","level":"info","event":"Dag name:air_quality_pipeline","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:59.308688Z","level":"info","event":"Total records: 2","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:59.309227Z","level":"info","event":"Data type: <class 'list'>","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:59.309754Z","level":"info","event":"Full data: [{'DateObserved': '2026-05-26', 'HourObserved': 22, 'LocalTimeZone': 'EST', 'ReportingArea': 'New York City Region', 'StateCode': 'NY', 'Latitude': 40.8419, 'Longitude': -73.8359, 'ParameterName': 'O3', 'AQI': 39, 'Category': {'Number': 1, 'Name': 'Good'}}, {'DateObserved': '2026-05-26', 'HourObserved': 22, 'LocalTimeZone': 'EST', 'ReportingArea': 'New York City Region', 'StateCode': 'NY', 'Latitude': 40.8419, 'Longitude': -73.8359, 'ParameterName': 'PM2.5', 'AQI': 52, 'Category': {'Number': 2, 'Name': 'Moderate'}}]","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:59.310254Z","level":"info","event":"Validation passed — 2 total records","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:59.310805Z","level":"info","event":"Records with AQI: 2","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:59.308734Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-27T03:29:59.338277Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:59.338959Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-27T03:29:59.339672Z","level":"info","event":"Task operator:<Task(PythonOperator): validate_data>","logger":"task.stdout"}
